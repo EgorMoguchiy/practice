@@ -1,4 +1,4 @@
-"# prectice" 
+"# practice" 
 
 1. Docker-compose, который будет собирает 2 контейнера. 
 Их имена: "mongo_databse" и "mongo_express"
