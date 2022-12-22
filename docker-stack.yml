@@ -16,10 +16,11 @@ services:
         max_attempts: 3
         delay: 5s
       update_config:
+        failure_action: rollback
         parallelism: 0
         delay: 5s
         order: stop-first
-      rollbask_config:
+      rollback_config:
         parallelism: 0
         delay: 5s
         order: stop-first
