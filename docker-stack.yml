@@ -8,6 +8,9 @@ services:
     ports:
       - 27017:27017
     deploy:
+      resources:
+        limits:
+          memory: 512M
       restart_policy:
         condition: on-failure
     healthcheck:
@@ -26,8 +29,9 @@ services:
     image: mongo-express:0.54.0
     container_name: mongo_express
     deploy:
-      restart_policy:
-        condition: on-failure
+      resources:
+        limits:
+          memory: 512M
     ports:
       - 8081:8081
     depends_on:
