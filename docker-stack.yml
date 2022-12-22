@@ -13,6 +13,17 @@ services:
           memory: 512M
       restart_policy:
         condition: on-failure
+        max_attempts: 3
+        delay: 5s
+      update_config:
+        parallelism: 0
+        delay: 5s
+        order: stop-first
+      rollbask_config:
+        parallelism: 0
+        delay: 5s
+        order: stop-first
+
     healthcheck:
       test: mongo localhost:27017 || exit 1
       interval: 30s
