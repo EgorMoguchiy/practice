@@ -8,7 +8,6 @@ services:
     ports:
       - 27017:27017
     deploy:
-      replicas: 2
       restart_policy:
         condition: on-failure
     healthcheck:
@@ -27,7 +26,6 @@ services:
     image: mongo-express:0.54.0
     container_name: mongo_express
     deploy:
-      replicas: 2
       restart_policy:
         condition: on-failure
     ports:
